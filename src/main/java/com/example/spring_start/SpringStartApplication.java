@@ -9,9 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringStartApplication {
 
+    private static final Logger log = LoggerFactory.getLogger(SpringStartApplication.class);
+
     public static void main(String[] args) {
         SpringApplication.run(SpringStartApplication.class, args);
-        System.out.println("Welcome to the first project");
     }
 
 
