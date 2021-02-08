@@ -24,13 +24,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .requestMatchers(EndpointRequest.to("info")).permitAll()
-                .requestMatchers(EndpointRequest.toAnyEndpoint()).hasRole("ADMIN")
+                .requestMatchers(EndpointRequest.toAnyEndpoint()).hasRole("ACTUATOR")
                 .antMatchers("/actuator/").hasRole("ACTUATOR")
+                .antMatchers("/link/submit").hasRole("USER")
+                .antMatchers("/link/**").permitAll()
                 .antMatchers("/").permitAll()
-                    .antMatchers("/link/submit").hasRole("USER")
+                .antMatchers("/h2-console/**").permitAll()
                 .and()
-                .formLogin();
-
+                .formLogin()
+                .and()
+                .csrf().disable()
+                .headers().frameOptions().disable();
 
     }
 
