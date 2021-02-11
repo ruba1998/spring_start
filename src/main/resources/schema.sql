@@ -1,9 +1,6 @@
-CREATE DATABASE  IF NOT EXISTS `springit`;
+/*CREATE DATABASE  IF NOT EXISTS `springit`;
 USE `springit`;
 
---
--- Table structure for table `comment`
---
 DROP TABLE IF EXISTS `comment`;
 
 CREATE TABLE `comment` (
@@ -18,9 +15,6 @@ CREATE TABLE `comment` (
                            KEY `FKoutxw6g1ndh1t6282y0fwvami` (`link_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Table structure for table `link`
---
 
 DROP TABLE IF EXISTS `link`;
 CREATE TABLE `link` (
@@ -33,3 +27,5 @@ CREATE TABLE `link` (
                         `url` varchar(255) DEFAULT NULL,
                         PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+*/
